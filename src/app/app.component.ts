@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HelloComponent } from './hello/hello.component'
 
 // decorator
 function log(target, name, descriptor) {
