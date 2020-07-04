@@ -61,4 +61,13 @@ export class AppComponent {
     return a * a
   }
 
+  callMyFunction() {
+    console.log("Function called")
+  }
+
+  callMyFunction2() {
+    this.myDisabledValue = !this.myDisabledValue
+    console.log("Function called")
+  }
+
 }
