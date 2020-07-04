@@ -17,11 +17,30 @@ function log(target, name, descriptor) {
   return descriptor
 }
 
+function log2(className) {
+  console.log(className)
+  return(...args) => {
+    console.log("Arguments passed to this class's constructors are" , args)
+    return new className(...args)
+  }
+}
+
+//@log2
+class myExampleClass {
+  constructor(arg1,arg2) {
+    console.log("Constructor fired!")
+  }
+}
+
+const myClass = new myExampleClass(5,10)
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+//@log2
 export class AppComponent {
   title = 'angular';
 
