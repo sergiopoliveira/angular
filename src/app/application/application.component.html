@@ -1,0 +1,12 @@
+<table>
+    <tr>
+<td>S No.</td>
+        <td>Name</td>
+        <td>Is Online?</td>
+    </tr>
+    <tr *ngFor="let record of records; let i = index; let firstRecord = first; let lastRecord = last; let evenRecords = even; let oddRecords = odd" [ngClass]="{odd: oddRecords, even: evenRecords, first: firstRecord, last: lastRecord}">
+        <td>{{i}}</td>
+       <td> {{record.name}}</td>
+       <td>{{record.online}}</td>
+    </tr>
+</table>
