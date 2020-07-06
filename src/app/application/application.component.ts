@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecordsService } from '../records.service';
 
 @Component({
   selector: 'app-application',
@@ -7,24 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicationComponent implements OnInit {
 
-  records = [
-    {
-      name: 'Sergio',
-      online: true
-    },
-    {
-      name: 'ABC',
-      online: false
-    },
-    {
-      name: 'XYZ',
-      online: false
-    }
-  ]
+  records: {}
 
-  constructor() { }
+  constructor(private myFirstService : RecordsService) { }
 
   ngOnInit(): void {
+    this.records = this.myFirstService.getData();
   }
 
 }
