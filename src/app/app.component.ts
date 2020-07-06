@@ -46,6 +46,7 @@ export class AppComponent {
   title = 'angular';
   myVariable = "variable"
   myDisabledValue = false
+  texto = 'abc';
 
   constructor() {
     setInterval(() => {
@@ -68,6 +69,11 @@ export class AppComponent {
   callMyFunction2() {
     this.myDisabledValue = !this.myDisabledValue
     console.log("Function called")
+  }
+
+  updateValue(e) {
+    this.texto = e.target.value
+    console.log(e.target.value)
   }
 
 }

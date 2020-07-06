@@ -1,10 +1,17 @@
 <!--Hello world. A custom component says <app-hello></app-hello>-->
 
 <!-- One way data binding, target to source []-->
-<input type="text" [value]="myVariable" [disabled]="myDisabledValue"/>
+<input type="text" [value]="myVariable" [disabled]="myDisabledValue" />
 
 <!-- One way data binding, source to target ()-->
-<button (click) = "callMyFunction()">Hey There!</button>
+<button (click)="callMyFunction()">Hey There!</button>
+
+<button (click)="callMyFunction2()">Hey There!</button>
 
 <!-- Two way data binding [()]-->
-<button (click) = "callMyFunction2()">Hey There!</button>
+<input type="text" [value]="texto" (input)="updateValue($event)">
+{{texto}}
+
+<!-- Two way data binding [()]-->
+<input type="text" [(ngModel)]="texto">
+{{texto}}
