@@ -14,7 +14,11 @@ export class RecordsService {
 
   }
 
-  getData() {
+  getDataOriginal() {
     return this.http.get<myData>('http://localhost:1234/file.json');
+  }
+
+  getData() {
+    return this.http.get<myData>('/api/file.json');
   }
 }
