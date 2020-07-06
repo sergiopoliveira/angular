@@ -7,6 +7,7 @@ import { HelloComponent } from './hello/hello.component';
 import { FormsModule } from '@angular/forms';
 import { ApplicationComponent } from './application/application.component'
 import { RecordsService } from './records.service'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RecordsService } from './records.service'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [RecordsService],
   bootstrap: [AppComponent]
