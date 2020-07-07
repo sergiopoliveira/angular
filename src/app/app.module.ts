@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './auth.guard';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { AuthGuard } from './auth.guard';
       }
     ])
   ],
-  providers: [RecordsService, AuthGuard],
+  providers: [RecordsService, AuthGuard, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
