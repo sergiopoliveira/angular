@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HelloComponent } from './hello/hello.component'
 
 // decorator
@@ -42,7 +42,7 @@ const myClass = new myExampleClass(5, 10)
 })
 
 //@log2
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'angular';
   myVariable = "variable"
   myDisabledValue = false
@@ -54,6 +54,8 @@ export class AppComponent {
       this.myVariable = Math.random().toString();
       this.myDisabledValue = Math.random() > 0.5
     },500)
+  }
+  ngOnInit(): void {
   }
 
   //decorator annotation
